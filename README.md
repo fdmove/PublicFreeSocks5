@@ -1,6 +1,7 @@
 # PublicFreeSocks5
 Get the public free socks5 ip:port from some websites 
 
+<pre>
 apt-get update  
 apt-get install python3 
 apt-get install python3-pip
@@ -36,9 +37,8 @@ status 取值-1 0 1
 // 1  表示本次检测 该socks5可用
 
 
-root@debian:~/PublicFreeSocks5# sqlite3 mySocks5.db
-SQLite version 3.27.2 2019-02-25 16:06:06
-Enter ".help" for usage hints.
+sqlite3 mySocks5.db
+
 sqlite> .table
 socks5
 sqlite> .schema socks5
@@ -50,3 +50,4 @@ CREATE TABLE `socks5` (`idx` INTEGER not null primary key autoincrement,
 );
 CREATE UNIQUE INDEX idx_1st_main on socks5 (ip,port);
 sqlite> 
+</pre>
